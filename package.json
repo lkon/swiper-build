@@ -3,62 +3,7 @@
   "version": "6.3.5",
   "description": "Most modern mobile touch slider and framework with hardware accelerated transitions",
   "scripts": {
-    "build:dev": "cross-env NODE_ENV=development node scripts/build",
-    "build:prod": "cross-env NODE_ENV=production node scripts/build",
-    "build-icons-font": "python ./scripts/icon-font/generate.py",
-    "playground:dev": "cross-env NODE_ENV=development node scripts/playground",
-    "playground:prod": "cross-env NODE_ENV=production node scripts/playground",
-    "watch:dev": "cross-env NODE_ENV=development node scripts/watch",
-    "watch:prod": "cross-env NODE_ENV=production node scripts/watch",
-    "webpack:react": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/webpack-react.config.js",
-    "webpack:vue": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/webpack-vue.config.js",
-    "webpack:svelte": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/webpack-svelte.config.js",
-    "dev": "npm run build:dev && npm run playground:dev && concurrently --kill-others \"npm run serve\" \"npm run watch:dev\" ",
-    "prod": "npm run build:prod && npm run playground:prod && concurrently --kill-others \"npm run serve\" \"npm run watch:prod\" ",
-    "react:dev": "npm run build:dev && concurrently --kill-others \"npm run webpack:react\" \"npm run watch:dev\"",
-    "vue:dev": "npm run build:dev && concurrently --kill-others \"npm run webpack:vue\" \"npm run watch:dev\"",
-    "svelte:dev": "npm run build:dev && concurrently --kill-others \"npm run webpack:svelte\" \"npm run watch:dev\"",
-    "serve": "serve -l tcp://0.0.0.0:5000",
-    "prettier": "prettier \"**/*.+(js|json|scss|css|less|ts|svelte|jsx)\"",
-    "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different",
-    "lint": "eslint --ext .js,.svelte,.jsx .",
-    "validate": "npm-run-all --parallel check-format lint",
-    "release": "npm run validate && node ./scripts/release",
-    "test": "npm run validate && npm run build:prod"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nolimits4web/Swiper.git"
-  },
-  "keywords": [
-    "swiper",
-    "swipe",
-    "slider",
-    "touch",
-    "ios",
-    "mobile",
-    "cordova",
-    "phonegap",
-    "app",
-    "framework",
-    "framework7",
-    "carousel",
-    "gallery",
-    "plugin"
-  ],
-  "author": "Vladimir Kharlampidi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nolimits4web/swiper/issues"
-  },
-  "homepage": "https://swiperjs.com",
-  "funding": {
-    "type": "patreon",
-    "url": "https://www.patreon.com/vladimirkharlampidi"
-  },
-  "engines": {
-    "node": ">= 4.7.0"
+    "build:dev": "cross-env NODE_ENV=development node scripts/build"
   },
   "browserslist": [
     "Android >= 7",
